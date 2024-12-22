@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 15px;
+            transition: 0.4s;
+
+        }
+        .active, .accordion:hover{
+            background-color: #CCC;
+        }
+
+       .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+       }
+    </style>
+</head>
+<body>
+    <h2>Accordion</h2>
+    <button class="accordion">Section1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repudiandae deleniti voluptatem culpa maxime, blanditiis a doloribus debitis quis temporibus molestiae non nobis rem adipisci illo, explicabo tenetur ipsa optio?</p>
+    </div>
+    </div>
+    <button class="accordion">Section2</button>
+    <div class="panel">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laborum consectetur corporis natus saepe? Harum sequi libero voluptate deserunt omnis, veniam maiores quam excepturi praesentium eum corrupti sunt dicta eligendi eveniet vitae minus voluptates aut.</p>
+</div>
+    
+    <button class="accordion">Section3</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, voluptas. Inventore consequatur rem aperiam dolorem aspernatur neque dicta optio voluptatum impedit eveniet nesciunt, nisi culpa error? Laborum ullam cum consectetur provident et tenetur? Sit, nemo. Id eaque unde est consectetur.</p>
+</div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+    
+</body>
+</html>
